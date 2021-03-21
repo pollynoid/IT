@@ -1,0 +1,39 @@
+print("введите N")
+n = int(input())
+print("введите M")
+m = int(input())
+print("введите X")
+x = int(input())
+print("введите Y")
+y = int(input())
+
+def findmindist(length, distance):
+    if distance > (length - distance):
+        min = length - distance
+    else:
+        min = distance
+    return min
+
+def whatmin(a, b):
+    if a<b:
+        print ("минимальное расстояние:")
+        print (a)
+    else:
+        print ("минимальное расстояние:")
+        print (b)
+
+
+if m>n:
+    if y >= m or x >= n:
+        print("данные некорректны")
+    else:
+        min1 = findmindist(n, x)
+        min2 = findmindist(m, y)
+        whatmin(min1, min2)
+else:
+    if x >= m or y >= n:
+        print("данные некорректны")
+    else:
+        min1 = findmindist(m, x)
+        min2 = findmindist(n, y)
+        whatmin(min1, min2)
